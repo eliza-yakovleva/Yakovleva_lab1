@@ -3,20 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First Web Page</title>
+    <title>Flexbox Layout</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       body {
         font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 50px;
       }
-      h1 {
-        color: blue;
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .header {
+        background: #222;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav {
+        display: flex;
+        gap: 15px;
+      }
+      .nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .content {
+        display: flex;
+        flex: 1;
+      }
+      .sidebar {
+        background: #555;
+        color: white;
+        width: 30%;
+        padding: 20px;
+      }
+      .main {
+        background: #de6565;
+        flex: 1;
+        padding: 20px;
+      }
+      .footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
       }
     </style>
   </head>
   <body>
-    <h1>Welcome to My First Web Page!</h1>
-    <p>This is my first website created in an online class.</p>
+    <div class="container">
+      <div class="header">
+        <div>Logo</div>
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <div class="content">
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main Content</div>
+      </div>
+      <div class="footer">Footer</div>
+    </div>
   </body>
 </html>
